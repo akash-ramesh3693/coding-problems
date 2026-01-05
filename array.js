@@ -18,3 +18,21 @@ const arr2 = [];
 const arr3 = [10, 10, 10];
 const result = largestElement(arr3);
 console.log(result);
+
+//2.Find the smallest element in an array.
+function smallesElement(arr) {
+  if (arr.length === 0) {
+    return "array should not be empty";
+  }
+
+  let smallest = arr[0];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] < smallest) {
+      smallest = arr[i];
+    }
+  }
+  return smallest;
+}
+
+const smallElement = smallesElement(arr1);
+console.log(smallElement);
