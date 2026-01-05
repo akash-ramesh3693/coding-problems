@@ -39,5 +39,5 @@ console.log(smallElement);
 
 //3.merge conflicts
 function calculate(a, b) {
-  return a + b;
+  return a + b; //sumlogic
 }
