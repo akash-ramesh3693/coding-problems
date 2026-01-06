@@ -35,4 +35,37 @@ function smallesElement(arr) {
 }
 
 const smallElement = smallesElement(arr1);
+
 console.log(smallElement);
+
+//3.merge conflicts
+function calculate(a, b) {
+  return a + b; //sumlogic
+}
+function calculate(a, b) {
+  return a * b;
+}
+
+// console.log(smallElement);
+
+//3.find second largest in the given elements
+function findSecondLargest(arr) {
+  if (arr.length < 2) {
+    return null;
+  }
+  let largest = -Infinity;
+  let secondLargest = -Infinity;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > largest) {
+      secondLargest = largest;
+      largest = arr[i];
+    } else if (arr[i] > secondLargest && arr[i] !== largest) {
+      secondLargest = arr[i];
+    }
+  }
+  return secondLargest === -Infinity ? null : secondLargest;
+}
+
+const resultsl = findSecondLargest(arr3);
+
+console.log(resultsl);
