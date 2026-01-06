@@ -17,7 +17,7 @@ const arr1 = [-1, -2, -3];
 const arr2 = [];
 const arr3 = [10, 10, 10];
 const result = largestElement(arr3);
-console.log(result);
+// console.log(result);
 
 //2.Find the smallest element in an array.
 function smallesElement(arr) {
@@ -35,4 +35,26 @@ function smallesElement(arr) {
 }
 
 const smallElement = smallesElement(arr1);
-console.log(smallElement);
+// console.log(smallElement);
+
+//3.find second largest in the given elements
+function findSecondLargest(arr) {
+  if (arr.length < 2) {
+    return null;
+  }
+  let largest = -Infinity;
+  let secondLargest = -Infinity;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > largest) {
+      secondLargest = largest;
+      largest = arr[i];
+    } else if (arr[i] > secondLargest && arr[i] !== largest) {
+      secondLargest = arr[i];
+    }
+  }
+  return secondLargest === -Infinity ? null : secondLargest;
+}
+
+const resultsl = findSecondLargest(arr3);
+
+console.log(resultsl);
