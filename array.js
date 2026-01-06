@@ -17,7 +17,7 @@ const arr1 = [-1, -2, -3];
 const arr2 = [];
 const arr3 = [10, 10, 10];
 const result = largestElement(arr3);
-console.log(result);
+// console.log(result);
 
 //2.Find the smallest element in an array.
 function smallesElement(arr) {
@@ -36,11 +36,3 @@ function smallesElement(arr) {
 
 const smallElement = smallesElement(arr1);
 console.log(smallElement);
-
-//3.merge conflicts
-function calculate(a, b) {
-  return a + b; //sumlogic
-}
-function calculate(a, b) {
-  return a * b;
-}
