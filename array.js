@@ -36,7 +36,7 @@ function smallesElement(arr) {
 
 const smallElement = smallesElement(arr1);
 
-console.log(smallElement);
+// console.log(smallElement);
 
 //3.merge conflicts
 function calculate(a, b) {
@@ -68,4 +68,27 @@ function findSecondLargest(arr) {
 
 const resultsl = findSecondLargest(arr3);
 
-console.log(resultsl);
+// console.log(resultsl);
+
+//4.find the second smallest element in an array
+function secondSmallest(arr) {
+  if (arr.length < 2) {
+    return null;
+  }
+
+  let smallest = Infinity;
+  let secondSmallest = Infinity;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] < smallest) {
+      secondSmallest = smallest;
+      smallest = arr[i];
+    } else if (arr[i] < secondSmallest && arr[i] !== smallest) {
+      secondSmallest = arr[i];
+    }
+  }
+  return secondSmallest === Infinity ? null : secondSmallest;
+}
+
+const smallestArray = [2, 3, 4, 5, 7];
+const resultS = secondSmallest(smallestArray);
+console.log(resultS);
