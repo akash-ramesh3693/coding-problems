@@ -58,3 +58,13 @@ function findSecondLargest(arr) {
 const resultsl = findSecondLargest(arr3);
 
 console.log(resultsl);
+console.log(smallElement);
+
+//3.merge conflicts
+function calculate(a, b) {
+  return a + b; //sumlogic
+}
+function calculate(a, b) {
+  return a * b;
+}
+
