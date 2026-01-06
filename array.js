@@ -91,4 +91,38 @@ function secondSmallest(arr) {
 
 const smallestArray = [2, 3, 4, 5, 7];
 const resultS = secondSmallest(smallestArray);
-console.log(resultS);
+// console.log(resultS);
+
+//5.reverse an array elements.
+
+function reverseAnArray(arr) {
+  let left = 0;
+  let right = arr.length - 1;
+  while (left < right) {
+    let temp = arr[left];
+    arr[left] = arr[right];
+    arr[right] = temp;
+
+    left++;
+    right--;
+  }
+
+  return arr;
+}
+
+// console.log(reverseAnArray(arr));
+// //5.1 arr.reverse method
+// const res = arr.reverse();
+// console.log(arr);
+
+//5.2 using reverse looping.
+function reversedArray(arr) {
+  let reversed = [];
+  for (i = arr.length - 1; i >= 0; i--) {
+    reversed.push(arr[i]);
+  }
+  return reversed;
+}
+const arrR = [1, 2, 3, 4, 5];
+const reversedArrayResult = reversedArray(arrR);
+console.log(reversedArrayResult);
