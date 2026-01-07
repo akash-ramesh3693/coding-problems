@@ -125,4 +125,17 @@ function reversedArray(arr) {
 }
 const arrR = [1, 2, 3, 4, 5];
 const reversedArrayResult = reversedArray(arrR);
-console.log(reversedArrayResult);
+// console.log(reversedArrayResult);
+
+//6.remove duplicates from an array using Set
+//order preserved
+//clean and fast
+
+function removeDuplicates(arr) {
+  return [...new Set(arr)];
+}
+
+const duplicateArr = [1, 2, 2, 3, 4, 5, "apple", "apple", "box", "box"];
+const originalResult = removeDuplicates(duplicateArr);
+
+console.log(originalResult);
