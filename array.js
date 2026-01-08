@@ -140,7 +140,7 @@ const originalResult = removeDuplicates(duplicateArr);
 
 // console.log(originalResult);
 
-//6.1 using loop
+//6.1 remove duplicates and preseved order with inner and outer loop
 
 function removeDuplicates2(arr) {
   let result = [];
