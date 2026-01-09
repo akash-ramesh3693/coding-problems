@@ -54,16 +54,12 @@ function findSecondLargest(arr) {
     return null;
   }
   let largest = -Infinity;
-  let secondLargest = -Infinity; //we are trying to find maximum values every real
-  //numbers in greater than -infinity
-
+  let secondLargest = -Infinity;
   for (let i = 0; i < arr.length; i++) {
     if (arr[i] > largest) {
-      //10 > -infinity
-      secondLargest = largest; //-infinity
-      largest = arr[i]; //10
+      secondLargest = largest;
+      largest = arr[i];
     } else if (arr[i] > secondLargest && arr[i] !== largest) {
-      //10 > infinity && 10 !== 10;
       secondLargest = arr[i];
     }
   }
@@ -81,8 +77,7 @@ function secondSmallest(arr) {
   }
 
   let smallest = Infinity;
-  let secondSmallest = Infinity; //finding the minimum values
-  //every realnumber is smaller than infinity
+  let secondSmallest = Infinity;
   for (let i = 0; i < arr.length; i++) {
     if (arr[i] < smallest) {
       secondSmallest = smallest;
@@ -98,8 +93,7 @@ const smallestArray = [2, 3, 4, 5, 7];
 const resultS = secondSmallest(smallestArray);
 // console.log(resultS);
 
-//5.reverse an array elements.two pointer approach.
-//swapping the elements
+//5.reverse an array elements.
 
 function reverseAnArray(arr) {
   let left = 0;
@@ -167,4 +161,29 @@ function removeDuplicates2(arr) {
 }
 
 const duplicateArray = removeDuplicates2(duplicateArr);
-console.log(duplicateArray);
+// console.log(duplicateArray);
+
+//7 .check whether an array is sorted in ascending order
+
+function sortedArray(arr) {
+  for (let i = 0; i < arr.length - 1; i++) {
+    if (arr[i] > arr[i + 1]) {
+      return false;
+    }
+  }
+  return true;
+}
+
+console.log(sortedArray([2, 3, 4, 5]));
+
+//7.1 check whether an array is sorted in desending orders.
+function sortedArrayDesc(arr) {
+  for (let i = 0; i < arr.length - 1; i++) {
+    if (arr[i] < arr[i + 1]) {
+      return false;
+    }
+  }
+  return true;
+}
+
+console.log(sortedArrayDesc([5, 4, 3, 2, 1]));
