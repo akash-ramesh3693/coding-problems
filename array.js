@@ -54,12 +54,16 @@ function findSecondLargest(arr) {
     return null;
   }
   let largest = -Infinity;
-  let secondLargest = -Infinity;
+  let secondLargest = -Infinity; //we are trying to find maximum values every real
+  //numbers in greater than -infinity
+
   for (let i = 0; i < arr.length; i++) {
     if (arr[i] > largest) {
-      secondLargest = largest;
-      largest = arr[i];
+      //10 > -infinity
+      secondLargest = largest; //-infinity
+      largest = arr[i]; //10
     } else if (arr[i] > secondLargest && arr[i] !== largest) {
+      //10 > infinity && 10 !== 10;
       secondLargest = arr[i];
     }
   }
@@ -77,7 +81,8 @@ function secondSmallest(arr) {
   }
 
   let smallest = Infinity;
-  let secondSmallest = Infinity;
+  let secondSmallest = Infinity; //finding the minimum values
+  //every realnumber is smaller than infinity
   for (let i = 0; i < arr.length; i++) {
     if (arr[i] < smallest) {
       secondSmallest = smallest;
@@ -93,7 +98,8 @@ const smallestArray = [2, 3, 4, 5, 7];
 const resultS = secondSmallest(smallestArray);
 // console.log(resultS);
 
-//5.reverse an array elements.
+//5.reverse an array elements.two pointer approach.
+//swapping the elements
 
 function reverseAnArray(arr) {
   let left = 0;
