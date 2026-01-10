@@ -186,4 +186,15 @@ function sortedArrayDesc(arr) {
   return true;
 }
 
-console.log(sortedArrayDesc([5, 4, 3, 2, 1]));
+console.log(sortedArrayDesc([5, 4, 3, 7, 2, 1]));
+
+//8 Built in sort method for ascending and descending order
+
+let sortAsec = [5, 4, 3, 2, 1, 9, 8, 7];
+
+const result1 = sortAsec.sort((a, b) => a - b);
+console.log(result1);
+
+let sortDesc = [5, 4, 3, 2, 1, 9, 8, 7];
+const result2 = sortDesc.sort((a, b) => b - a);
+console.log(result2);
