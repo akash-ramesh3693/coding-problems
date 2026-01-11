@@ -198,3 +198,41 @@ console.log(result1);
 let sortDesc = [5, 4, 3, 2, 1, 9, 8, 7];
 const result2 = sortDesc.sort((a, b) => b - a);
 console.log(result2);
+
+//8.1 using bubble sort
+//after each outer loop, the largest element moves to the end.
+//inner loop compares adjacent elements
+//swapping only left > right
+function sortingAscending(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = 0; j < arr.length - i - 1; j++) {
+      if (arr[j] > arr[j + 1]) {
+        let temp = arr[j];
+        arr[j] = arr[j + 1];
+        arr[j + 1] = temp;
+      }
+    }
+  }
+  return arr;
+}
+
+const sortingAsecResult = sortingAscending(sortArr);
+console.log(sortingAsecResult);
+
+//8.2 descending order
+function sortDescendingArray(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = 0; j < arr.length - i - 1; j++) {
+      if (arr[j] < arr[j + 1]) {
+        let temp = arr[j];
+        arr[j] = arr[j + 1];
+        arr[j + 1] = temp;
+      }
+    }
+  }
+  return arr;
+}
+
+const sortArr = [1, 2, 3, 4, 5];
+const sortDescArray = sortDescendingArray(sortArr);
+console.log(sortDescArray);
