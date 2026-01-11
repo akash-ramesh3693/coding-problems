@@ -236,3 +236,16 @@ function sortDescendingArray(arr) {
 const sortArr = [1, 2, 3, 4, 5];
 const sortDescArray = sortDescendingArray(sortArr);
 console.log(sortDescArray);
+
+//9 sum of array
+function sumOfArray(arr) {
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    sum += arr[i];
+  }
+  return sum;
+}
+
+const res = [1, 2, 3, 4, 5];
+const sumResult = sumOfArray(res);
+console.log(sumResult);
