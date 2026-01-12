@@ -280,9 +280,25 @@ function frequencyOfElement(arr, element) {
   return count;
 }
 
-const freqArr = [1, 3, 3, 2, 5, 5];
 const countFreq = frequencyOfElement(freqArr, 3);
 console.log(countFreq);
 
-//using filter method
-const filterfrequency
+//using filter method[3,3]
+function filterfrequency(arr, element) {
+  return arr.filter((item) => item === element).length;
+}
+const filterResult = filterfrequency(freqArr, 3);
+// console.log(filterResult);
+
+//using reduce method accumulates the count while traversing the array once.
+function reduceFrequency(arr, element) {
+  return arr.reduce((count, item) => {
+    if (item === element) {
+      count++;
+    }
+    return count;
+  }, 0);
+}
+const freqArr = [1, 3, 3, 3, 2, 5, 5];
+const reduceResult = reduceFrequency(freqArr, 3);
+console.log(reduceResult);
