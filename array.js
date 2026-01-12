@@ -248,4 +248,26 @@ function sumOfArray(arr) {
 
 const res = [1, 2, 3, 4, 5];
 const sumResult = sumOfArray(res);
-console.log(sumResult);
+// console.log(sumResult);
+
+//10.average of array elements
+//handling
+function averageOfArray(arr) {
+  if (arr.length === 0) {
+    return "array shouldn't be empty";
+  }
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    sum += arr[i];
+  }
+
+  return sum / arr.length;
+}
+
+const avgResult = [1, 2, 3, 4, 5];
+
+const avgFunc = averageOfArray(avgResult);
+
+console.log(avgFunc);
+
+//11.Count frequency of element
