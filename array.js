@@ -302,3 +302,21 @@ function reduceFrequency(arr, element) {
 const freqArr = [1, 3, 3, 3, 2, 5, 5];
 const reduceResult = reduceFrequency(freqArr, 3);
 console.log(reduceResult);
+
+//frequency of all elements using hash map;
+function frequencyOfAll(arr) {
+  let freq = {};
+  for (let i = 0; i < arr.length; i++) {
+    if (freq[arr[i]]) {
+      freq[arr[i]]++;
+    } else {
+      freq[arr[i]] = 1;
+    }
+  }
+  return freq;
+}
+
+const allFreq = ["a", "a", "b", "c", "c", "c"];
+const allFrequency = frequencyOfAll(allFreq);
+
+console.log(allFrequency);
