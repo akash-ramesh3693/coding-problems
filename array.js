@@ -320,3 +320,8 @@ const allFreq = ["a", "a", "b", "c", "c", "c"];
 const allFrequency = frequencyOfAll(allFreq);
 
 console.log(allFrequency);
+
+//Most asked in frontend interviews
+//used in lists ,tables, filter UI  logic
+//common in UI rendering & pagination
+//11.Move all zeros to the end.
