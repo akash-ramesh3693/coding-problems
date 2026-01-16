@@ -325,3 +325,27 @@ console.log(allFrequency);
 //used in lists ,tables, filter UI  logic
 //common in UI rendering & pagination
 //11.Move all zeros to the end.
+function moveZeroToTheEnd(arr) {
+  let j = 0;
+
+  //two pointer appraoch
+  //first pointer moves non zero elements forward
+  //keeps preserve orders.
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] !== 0) {
+      arr[j] = arr[i];
+      j++;
+    }
+  }
+  //second pointer moves zero's to the end of an array.
+  while (j < arr.length) {
+    arr[j] = 0;
+    j++;
+  }
+  return arr;
+}
+
+const zeroArr = [1, 2, 0, 0, 33, 4, 5, 3];
+
+const moveZerofunc = moveZeroToTheEnd(zeroArr);
+console.log(moveZerofunc);
