@@ -350,4 +350,24 @@ const zeroArr = [1, 2, 0, 0, 33, 4, 5, 3];
 const moveZerofunc = moveZeroToTheEnd(zeroArr);
 console.log(moveZerofunc);
 
-//12.find kth largest element in an array
+//12.find fibonacci series
+function fibonacci(n) {
+  let a = 0;
+  let b = 1;
+
+  if (n === 0) return [];
+  if (n === 1) return [0];
+
+  let result = [a, b];
+
+  for (let i = 2; i < n; i++) {
+    let next = a + b;
+    result.push(next);
+    a = b;
+    b = next;
+  }
+  return result;
+}
+
+const fibonacciResult = fibonacci(7);
+console.log(fibonacciResult);
