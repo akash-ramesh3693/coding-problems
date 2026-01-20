@@ -371,3 +371,5 @@ function fibonacci(n) {
 
 const fibonacciResult = fibonacci(7);
 console.log(fibonacciResult);
+
+//13.rotate array by k positions
