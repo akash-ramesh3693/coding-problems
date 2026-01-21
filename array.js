@@ -373,3 +373,28 @@ const fibonacciResult = fibonacci(7);
 console.log(fibonacciResult);
 
 //13.rotate array by k positions
+function rotateReverse(arr, start, end) {
+  while (start < end) {
+    let temp = arr[start];
+    arr[start] = arr[end];
+    arr[end] = temp;
+    start++;
+    end--;
+  }
+}
+
+function rotateArray(arr, k) {
+  let n = arr.length;
+  if (n === 0) return null;
+
+  k = k % n;
+  rotateReverse(arr, 0, n - 1);
+  rotateReverse(arr, 0, k - 1);
+  rotateReverse(arr, k, n - 1);
+
+  return arr;
+}
+
+const rotateArr = [1, 2, 3, 4, 5];
+const rotateResult = rotateArray(rotateArr, 3);
+console.log(rotateResult);
