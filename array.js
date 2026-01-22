@@ -373,7 +373,20 @@ const fibonacciResult = fibonacci(7);
 console.log(fibonacciResult);
 
 //13.rotate array by k positions
-function rotateReverse(arr, start, end) {
+function rotateArray(arr, k) {
+  let n = arr.length;
+  if (n === 0) return arr;
+
+  k = k % n; //valid rotations            // handle k > n
+
+  reverse(arr, 0, n - 1); // step 1
+  reverse(arr, 0, k - 1); // step 2
+  reverse(arr, k, n - 1); // step 3
+
+  return arr;
+}
+
+function reverse(arr, start, end) {
   while (start < end) {
     let temp = arr[start];
     arr[start] = arr[end];
@@ -383,18 +396,23 @@ function rotateReverse(arr, start, end) {
   }
 }
 
-function rotateArray(arr, k) {
-  let n = arr.length;
-  if (n === 0) return null;
-
-  k = k % n;
-  rotateReverse(arr, 0, n - 1);
-  rotateReverse(arr, 0, k - 1);
-  rotateReverse(arr, k, n - 1);
-
-  return arr;
+//14.print even numbers from an array;
+function printEvenNum(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] % 2 === 0) {
+      console.log(arr[i]);
+    }
+  }
 }
+let evenarr = [2, 5, 8, 7, 10, 3, 0, -4];
+const evenResult = printEvenNum(evenarr);
 
-const rotateArr = [1, 2, 3, 4, 5];
-const rotateResult = rotateArray(rotateArr, 3);
-console.log(rotateResult);
+//14.1 print even numbers
+function printEven() {
+  for (let i = 0; i <= 100; i++) {
+    if (i % 2 === 0) {
+      console.log(i);
+    }
+  }
+}
+printEven();
